@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <div className="p-4 rounded-lg w-full max-w-md">
-      <h1 className="text-4xl font-bold text-center mb-8 text-white drop-shadow-lg">Home Groceries</h1>
+      <h1 className="text-2xl sm:text-4xl font-bold text-center mb-8 text-white drop-shadow-lg">Home Groceries</h1>
       <TaskInput onAddTask={addTask} />
       <TaskList 
         tasks={tasks} 
