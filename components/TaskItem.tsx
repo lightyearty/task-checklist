@@ -22,7 +22,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
           onChange={() => onToggle(task.id)}
           className="mr-2"
         />
-        <span className={task.completed ? 'line-through' : ''}>{task.text}</span>
+        <span className={`px-3 py-1 rounded bg-pink-400 text-white ${task.completed ? 'line-through' : ''}`}>{task.text}</span>
       </label>
       <button
         onClick={() => onDelete(task.id)}
