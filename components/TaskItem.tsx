@@ -14,19 +14,19 @@ interface TaskItemProps {
 
 const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 p-2 border-b border-gray-300">
-      <label className="flex items-center flex-grow">
+    <div className="flex items-center justify-between gap-2 p-2 border-b border-gray-300">
+      <label className="flex items-center flex-grow min-w-0">
         <input
           type="checkbox"
           checked={task.completed}
           onChange={() => onToggle(task.id)}
-          className="mr-2"
+          className="mr-2 flex-shrink-0"
         />
         <span className={`px-3 py-1 rounded bg-pink-400 text-white break-words ${task.completed ? 'line-through' : ''}`}>{task.text}</span>
       </label>
       <button
         onClick={() => onDelete(task.id)}
-        className="text-white hover:text-gray-200 self-start sm:self-auto"
+        className="text-white hover:text-gray-200 flex-shrink-0"
       >
         Delete
       </button>
