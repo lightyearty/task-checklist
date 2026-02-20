@@ -26,7 +26,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
       </label>
       <button
         onClick={() => onDelete(task.id)}
-        className="text-red-500 hover:text-red-700"
+        className="text-white hover:text-gray-200"
       >
         Delete
       </button>
